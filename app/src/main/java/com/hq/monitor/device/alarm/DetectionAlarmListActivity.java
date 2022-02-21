@@ -111,6 +111,7 @@ public class DetectionAlarmListActivity extends BaseActivity implements View.OnC
      * 初始化列表
      */
     private void initRecyclerView() {
+
         // 删除过期n天的记录
         int saveDurationType = SpUtils.getInt(this, SpUtils.ALARM_SAVE_TIME_STRING, 0);
         String date = DateUtils.getStringOverdueDate(saveDurations[saveDurationType]);

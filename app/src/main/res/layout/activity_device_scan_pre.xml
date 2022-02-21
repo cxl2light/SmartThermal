@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cat_bright"
+    tools:ignore="SpUsage">
+
+    <com.hq.base.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:widget_attr_title="" />
+
+    <ImageView
+        android:id="@+id/ivText"
+        android:layout_below="@+id/title_bar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_width="206dp"
+        android:layout_height="31dp"
+        android:src="@drawable/ic_main_text_one"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/device_recycler_list"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="10dp" />
+        <RelativeLayout
+            android:id="@+id/rlDeviceName"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/bg_menu_select">
+            <TextView
+                android:id="@+id/tvDeviceName"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_toRightOf="@+id/tvDeviceName"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_drop_down_24"/>
+        </RelativeLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/progress_layout"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+            <com.hq.monitor.view.IOSLoadingView
+                android:id="@+id/loadingOne"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scan_tip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/tip_scanning_device"
+                android:textColor="@color/text_color_white"
+                android:textSize="14dp"
+                app:circle_finished_color="@color/theme_color" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/common_padding_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:id="@+id/scan_device_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingVertical="10dp"
+            android:enabled="true"
+            android:text="@string/scan_device"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_btn"
+            app:widget_selector_btn_corners_radius_left_bottom="10dp"
+            app:widget_selector_btn_corners_radius_left_top="10dp"
+            app:widget_selector_btn_corners_radius_right_bottom="10dp"
+            app:widget_selector_btn_corners_radius_right_top="10dp" />
+        <!--android:layout_weight="1"-->
+
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:id="@+id/connect_device_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:enabled="true"
+            android:paddingVertical="10dp"
+            android:text="@string/connect_device"
+            android:textSize="@dimen/text_size_btn"
+            android:visibility="gone"
+            app:widget_selector_btn_corners_radius_left_bottom="10dp"
+            app:widget_selector_btn_corners_radius_left_top="10dp"
+            app:widget_selector_btn_corners_radius_right_bottom="10dp"
+            app:widget_selector_btn_corners_radius_right_top="10dp"
+            tools:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

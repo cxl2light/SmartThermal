@@ -1,0 +1,6 @@
+rootProject.name='SmartThermal'
+include ':app'
+include ':base'
+include ':commonwidget'
+include ':basebean'
+include ':ijkplayer-java'

@@ -1,0 +1,20 @@
+package com.hq.monitor.ui.searchhelp.devicestart;
+
+import androidx.annotation.NonNull;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.viewholder.BaseViewHolder;
+import com.hq.monitor.R;
+import com.hq.monitor.adapter.QuickBean;
+
+public class DeviceSearchHelpDeviceAdapter extends BaseQuickAdapter<QuickBean, BaseViewHolder> {
+    public DeviceSearchHelpDeviceAdapter() {
+        super(R.layout.item_device_search_help_device);
+    }
+    @Override
+    protected void convert(@NonNull BaseViewHolder helper, QuickBean item) {
+        helper.setText(R.id.tvItemZero,"" + item.getIntOne());
+        helper.setImageResource(R.id.ivItemOne,item.getIntTwo());
+        helper.setText(R.id.tvItemOne,getContext().getString(item.getIntThree()));
+    }
+}

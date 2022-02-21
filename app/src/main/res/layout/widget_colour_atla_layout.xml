@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:background="@color/control_activity_bg"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_black"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_one"
+        app:text_str="@string/colour_atla_white" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_white"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_two"
+        app:text_str="@string/colour_atla_black" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_red"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_three"
+        app:text_str="@string/colour_atla_red" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_green"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_four"
+        app:text_str="@string/colour_atla_green" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_brownness"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_five"
+        app:text_str="@string/colour_atla_brownness" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/atla_rust"
+        style="@style/text_menu_style"
+        app:left_src="@drawable/shape_rect_color_six"
+        app:text_str="@string/colour_atla_rust" />
+
+</merge>

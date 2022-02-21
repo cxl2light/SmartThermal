@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:orientation="vertical"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/left_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:textColor="@color/text_color_normal_dark_bg"
+        android:textSize="@dimen/text_size_big"
+        tools:text="-" />
+
+    <FrameLayout
+        android:id="@+id/seek_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="4dp"
+        android:layout_weight="1">
+
+        <com.hq.monitor.device.widget.GraduationRuler
+            android:id="@+id/ruler"
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_gravity="center" />
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:visibility="visible"
+            android:id="@+id/value_indicator"
+            android:minWidth="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textSize="12dp"
+            app:widget_selector_btn_corners_half_circle="true"
+            app:widget_selector_btn_normal_start_color="@color/theme_color"
+            app:widget_selector_btn_same_w_h="true"
+            app:widget_selector_btn_stroke_color="#ffffff"
+            app:widget_selector_btn_stroke_width="1dp"
+            app:widget_selector_btn_text_color="@color/text_color_bright_bg"
+            tools:text="2" />
+        <com.hq.monitor.device.widget.vertical.VerticalIndicatorSeekBar
+            android:visibility="visible"
+            android:id="@+id/seekBarOne"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:maxHeight="2dp"
+            android:minHeight="2dp"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/seekbar_progress_drawable"
+            android:thumb="@drawable/seekbar_thumb" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:textColor="@color/text_color_normal_dark_bg"
+        android:textSize="@dimen/text_size_big"
+        tools:text="+" />
+</merge>

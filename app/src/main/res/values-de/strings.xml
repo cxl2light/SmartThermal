@@ -1,0 +1,183 @@
+<resources>
+    <string name="app_name">Smart Thermal</string>
+
+    <string name="confirm">Bestätigung</string>
+    <string name="about">Über</string>
+
+    <string name="rtsp_url_hint">请输入完整的Rtsp地址</string>
+    <string name="count_down_tip">%1$ds\u0020skip</string>
+    <string name="scan_device">Gerät\u0020 suchen</string>
+    <string name="scan_device_stop">Stop\u0020Scan</string>
+    <string name="scan_device_list">DeviceList：</string>
+    <string name="title_device_list">DeviceList</string>
+    <string name="title_input_rtsp_url">input address</string>
+    <string name="title_media_gallery">MediaCenter</string>
+    <string name="title_input_ftp_uri">ftp地址(本页面用于测试)</string>
+    <string name="connect_device">Gerät \u0020verbinden</string>
+    <string name="enter_device">Gerät \u0020eingeben</string>
+    <string name="please_select_connect_device">Wählen Sie Verbindungs-Device-Info</string>
+
+    <string name="about_software_introduce">\u0020\u0020\u0020\u0020The APP suitable for our handheld Thermal camera , you can got the real thermal image/video via the APP , and can remote control the thermal camera , also can share the image or video via the APP .</string>
+    <string name="version_name_placeholder">v%1$s</string>
+
+    <string name="control_left_ranging">Betätigung</string>
+    <string name="control_left_zoom">Zoom</string>
+    <string name="control_left_image_setting">Bildmenge</string>
+    <string name="control_left_system_setting">Systemset</string>
+    <string name="control_right_palette">Farbtabelle</string>
+    <string name="control_right_file">Dateien</string>
+
+    <string name="colour_atla_black">Schwarz</string>
+    <string name="colour_atla_white">Weiß</string>
+    <string name="colour_atla_red">Rot</string>
+    <string name="colour_atla_green">Grün</string>
+    <string name="colour_atla_brownness">golden</string>
+    <string name="colour_atla_rust">Violett</string>
+
+    <string name="base_enter">Eintreten</string>
+    <string name="base_known">Got it</string>
+    <string name="quit_out">Refuse</string>
+    <string name="click_to_law">Click to view the privacy agreement</string>
+    <string name="laws_title">Datenschutzerklärung der Nutzer</string>
+    <string name="laws_content">We attach great importance to your personal information and privacy protection. In order to effectively protect your personal rights and interests, before using the "Smart Thermal" service, you must carefully read all the terms in the "user privacy agreement". In order to provide you with live view of the thermal camera through the APP and remote control of the thermal camera, we will use the necessary functional information. 1. In order to use the purchased hardware and simply control the hardware, we need access to the network. 2. In order to facilitate recording and storing the audio and video content of the hardware, we will obtain your memory and camera permissions. 3. We will carry out the use / protection of your device files and other rules, as well as your user rights and other provisions. 4. Agree on our limitation of liability and exemption provisions; If you agree to the above agreement and statement, please click "agree" to start using the products and services. If you use it again, you agree to the user privacy agreement by default. Otherwise, please exit the APP and suggest to delete or uninstall the APP.</string>
+
+    <string name="operate_share">Teilen</string>
+    <string name="operate_delete">Bestätigung zum Löschen</string>
+    <string name="delete_tip_placeholder">Bestätigung zum Löschen: %1$s?</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+    <string name="error_no_decoder">This device does not provide a decoder for %1$s</string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for %1$s</string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder %1$s</string>
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="empty_picture_file_tip">Empty\u0020Image</string>
+    <string name="empty_video_file_tip">Empty\u0020Video</string>
+
+    <string name="str_reticle">Fadenkreuz</string>
+    <string name="str_xy">X-Y</string>
+    <string name="str_picture_in_picture">in picture</string>
+    <string name="str_tracking">Verfolgung</string>
+
+    <string name="str_sharpness">Schärfe</string>
+    <string name="str_contrast">Kontrast</string>
+    <string name="str_brightness">Helligkeit</string>
+    <string name="str_filtering">Entrauschen</string>
+
+    <string name="tip_scanning_device">Gerät suchen...</string>
+    <string name="tip_scan_finished_no_device">Scan Finished, No Device</string>
+    <string name="tip_open_wi_fi_hotspots">Please Open HotSpot</string>
+    <string name="tip_open_net">Bitte verbinden Sie WiFi oder schalten Sie den Hotspot ein und verbinden Sie das Gerät</string>
+    <string name="tip_delete_success">Delete\u0020\u0020Success</string>
+    <string name="tip_cur_ip_addr">Current\u0020IP：%1$s</string>
+    <string name="tip_hot_spot_no_device">The hot spot has no connected device</string>
+    <string name="tip_get_device_ip_exception">The current device IP is getting an exception：</string>
+    <string name="tip_save_success">Speichern \u0020erfolgreich</string>
+
+    <string name="help_device_wifi">Mit Hotspot verbinden</string>
+    <string name="help_phone_wifi">Mit WLAN verbinden</string>
+    <string name="help_same_wifi">Mit Router verbinden</string>
+
+    <string name="help_device_setting">Geräteeinstellung</string>
+    <string name="help_phone_setting">iPhone-Einstellungen</string>
+    <string name="help_search_device">Gerät suchen</string>
+
+    <string name="select_hint">Anleitung lesen?</string>
+    <string name="base_yes">Ja</string>
+    <string name="base_no">Nein</string>
+
+    <string name="help_search_device_1">Doppelklick auf die Wipptaste, um das Einstellungsmenü aufzurufen,\n betreten des Netzwerk durch kurzes Drücken der Wipptaste,\n wählen Sie Hotspot zum Konfigurieren aus.</string>
+    <string name="help_search_device_2">Aktivierung des Hotspot-Verbindung um mit der Konfiguration zu beginnen.</string>
+    <string name="help_search_device_3">Name und Passwort eingeben und bestätigen Sie die Einstellung mit OK.</string>
+    <string name="help_search_device_4">Wählen Sie das richtige Netzwerk in den WLAN-Einstellungen des Mobilgeräts aus.</string>
+    <string name="help_search_device_5">Geben Sie das richtige Passwort ein.</string>
+    <string name="help_search_device_6">Bestätigen Sie, dass die Verbindung erfolgreich war.</string>
+
+    <string name="help_search_mobile_1">Sicherstellen, dass das WLAN geöffnet ist, aber keine Verbindung besteht, bevor Sie den persönlichen Hotspot aktivieren.</string>
+    <string name="help_search_mobile_2">Passwort einlegen.</string>
+    <string name="help_search_mobile_3">Bestätigen Sie, dass der persönliche Hotspot erfolgreich geöffnet wurde.</string>
+    <string name="help_search_mobile_4">Doppelklick auf die Wipptaste, um das Einstellungsmenü aufzurufen,\n betreten des Netzwerk durch kurzes Drücken der Wipptaste,\n wählen Sie WLAN zum Konfigurieren aus.</string>
+    <string name="help_search_mobile_5">Wi-Fi-Verbindung aktivieren,wählen Sie den Hotspot vom Smart-Gerät aus.</string>
+    <string name="help_search_mobile_6">Richtiges Passwort eingeben und bestätigen Sie es mit Verbindung.</string>
+
+    <string name="help_search_wifi_1">Wählen Sie das drahtlose Netzwerk in den WLAN-Einstellungen des Mobilgeräts aus.</string>
+    <string name="help_search_wifi_2">Zur Verbindung, richtiges Passwort eingeben bitte</string>
+    <string name="help_search_wifi_3">Bestätigen Sie, dass die Verbindung erfolgreich war.</string>
+    <string name="help_search_wifi_4">Doppelklicken auf die Wipptaste, um das Einstellungsmenü aufzurufen,\n betreten Sie das Netzwerk durch kurzes Drücken der Wipptaste,\n wählen Sie WLAN zum Konfigurieren aus.</string>
+    <string name="help_search_wifi_5">Aktivieren Sie die Wi-Fi-Verbindung, wählen Sie dasselbe drahtlose Netzwerk wie das Smart-Gerät.</string>
+    <string name="help_search_wifi_6">Richtiges Passwort eingeben und bestätigen Sie es mit Verbindung.</string>
+
+    <string name="help_search_total_text">Verbinden in drei einfachen Schritten mit Mobilgeräten.</string>
+
+    <string name="str_picture">Bild</string>
+    <string name="str_video">Video</string>
+
+    <string name="menu_return_to_previous">Zurück zum vorherigen</string>
+    <string name="menu_connection_guide">Anschlussanleitung</string>
+    <string name="menu_device_management">Geräteverwaltung</string>
+    <string name="menu_realtime_vision">Echtzeit-Vision</string>
+    <string name="menu_live_stream">Liveübertragung</string>
+    <string name="menu_about">Über</string>
+
+    <string name="detection_alarm">Detection alarm</string>
+    <string name="detection_alarm_set">SET</string>
+    <string name="detection_alarm_record">RECORD</string>
+    <string name="detection_alarm_open">open</string>
+    <string name="detection_alarm_close">close</string>
+    <string name="detection_alarm_mode">Device reminder mode</string>
+    <string name="detection_alarm_mode_mute">mute</string>
+    <string name="detection_alarm_mode_vibrate">vibrate</string>
+    <string name="detection_alarm_mode_sound">sound</string>
+    <string name="detection_alarm_save_time">Save notification duration</string>
+    <string name="detection_alarm_save_one_day">one day</string>
+    <string name="detection_alarm_save_a_week">a week</string>
+    <string name="detection_alarm_save_one_month">one month</string>
+    <string name="detection_alarm_interval">Detection interval</string>
+    <string name="detection_alarm_interval_1_minute">10 seconds</string>
+    <string name="detection_alarm_interval_10_minutes">30 seconds</string>
+    <string name="detection_alarm_interval_30_minutes">60 seconds</string>
+    <string name="detection_alarm_all">ALL</string>
+    <string name="detection_alarm_animal">ANIMAL</string>
+    <string name="detection_alarm_person">PERSON</string>
+    <string name="detection_alarm_delete_record">Delete record</string>
+    <string name="detection_alarm_delete_all">Delete all</string>
+
+    <string name="device_management">Geräteverwaltung</string>
+    <string name="realtime_vision">Echtzeit-Vision</string>
+    <string name="live_stream">Liveübertragung</string>
+
+    <string name="about_product_sn">Produkt-SN:  \t </string>
+    <string name="about_current_version">Aktuelle Version:  \t</string>
+    <string name="about_product_introduction">Produktbeschreibung</string>
+    <string name="about_version_update_check">Auf Update überprüfen</string>
+    <string name="about_got_update">Neue Version installieren ：%1$s</string>
+    <string name="about_start_update">Update starten</string>
+    <string name="about_cancel_update">Abbrechen</string>
+    <string name="about_checking_update">Auf Update überprüfen</string>
+    <string name="error_network">NetWork Error，Please Check The NetWork Connection</string>
+    <string name="about_update_downloading">heruntergeladen ：%1$s</string>
+    <string name="about_update_pushing">Übertragen ：%1$s</string>
+    <string name="about_update_push">Update The Machine SoftWare</string>
+    <string name="about_update_success">Upgrade-Erfolg</string>
+    <string name="error_update">Upgrade-Fehler</string>
+    <string name="about_update_restart">Neustart</string>
+    <string name="about_update_upgrading">Bitte warten, Upgrade durchführen</string>
+
+    <string name="new_version_detected">Neue Version erkannt</string>
+    <string name="new_version_latest">Bereits die neueste Version</string>
+
+    <string name="app_about">Aktivieren Sie eine Echtzeitansicht in der App und teilen Sie ganz einfach, was Sie sehen, mit Freunden.</string>
+
+    <string name="str_exit">Zurück</string>
+    <string name="user_manual">Benutzerhandbuch</string>
+
+    <string name="version_content">Diese App. fordert Gerätefirmwareversion 2.0.2 oder höher an; Bitte laden Sie von link %1$s herunter und aktualisieren Sie bei Bedarf die Firmware des Geräts auf dem PC.</string>
+    <string name="version_one">Zugang zum Download</string>
+    <string name="version_two">Das ist nicht nötig</string>
+    <string name="version_three">Nicht mehr anzeigen</string>
+
+    <string name="give_file_path">Bitte geben Sie den Ordnerpfad ein</string>
+
+</resources>

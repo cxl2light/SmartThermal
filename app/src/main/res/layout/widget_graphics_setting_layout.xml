@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:background="@color/control_activity_bg"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/acuity_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_acuity"
+        app:text_str="@string/str_sharpness" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/contrast_ratio_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_contrast_ratio"
+        app:text_str="@string/str_contrast" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/brightness_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_brightness"
+        app:text_str="@string/str_brightness" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/noise_reduction_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_noise_reduction"
+        app:text_str="@string/str_filtering" />
+
+</merge>

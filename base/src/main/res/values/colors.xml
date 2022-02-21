@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FF4C1B</color>
+    <color name="colorPrimaryDark">#ddFF4C1B</color>
+    <color name="colorAccent">#FF4C1B</color>
+    <color name="theme_color">@color/colorPrimary</color>
+    <color name="default_btn_stroke_color">@color/theme_color</color>
+
+    <color name="background_common_background">@android:color/white</color>
+    <color name="background_common_bg_gray">#EAEAEA</color>
+    <color name="background_common_title">@color/background_common_bg_gray</color>
+
+    <color name="text_color_theme_bg">@android:color/white</color>
+    <color name="text_color_theme_bg_selected">@color/colorPrimary</color>
+    <color name="text_color_bright_bg">@android:color/white</color>
+    <color name="text_color_normal_dark_bg">@android:color/white</color>
+    <color name="text_color_selected_dark_bg">@color/theme_color</color>
+
+    <color name="tint_color_normal_dark_bg">@android:color/white</color>
+    <color name="tint_color_selected_dark_bg">@color/theme_color</color>
+
+    <color name="text_color_main_body">@android:color/black</color>
+    <color name="text_color_title">@android:color/black</color>
+    <color name="text_color_menu">@android:color/black</color>
+
+    <color name="bg_black">#000000</color>
+    <color name="bg_title">#02ffffff</color>
+    <color name="color_white">#ffffffff</color>
+    <color name="color_line_light">#E0E0E0</color>
+    <color name="text_color_white">#ffffffff</color>
+    <color name="text_white_trans">#88ffffff</color>
+    <color name="control_activity_bg">#000000</color>
+    <color name="player_activity_bg">#000000</color>
+    <color name="player_bg_trans">#774D4D4D</color>
+
+    <color name="gray_trans_one">#33000000</color>
+</resources>

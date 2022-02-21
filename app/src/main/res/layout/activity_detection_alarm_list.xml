@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cat_bright"
+    tools:context=".about.LoadingActivity"
+    tools:ignore="SpUsage">
+
+    <com.hq.base.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_alarm_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_default"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_bar"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:id="@+id/fl_alarm_item_1"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_gray_transparent_bg"
+                >
+                <TextView
+                    android:id="@+id/text_content_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="Cyclops325"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_item_triangle"
+                    />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/line_height_default"
+                android:layout_height="match_parent"
+                android:background="@color/line_horizontal_gray"/>
+
+            <FrameLayout
+                android:id="@+id/fl_alarm_item_2"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_gray_transparent_bg"
+                >
+                <TextView
+                    android:id="@+id/text_content_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="@string/detection_alarm_all"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_item_triangle"
+                    />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/line_height_default"
+                android:layout_height="match_parent"
+                android:background="@color/line_horizontal_gray"/>
+
+            <FrameLayout
+                android:id="@+id/fl_alarm_item_3"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_gray_transparent_bg"
+                >
+                <TextView
+                    android:id="@+id/text_content_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="2022.1.1"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_item_triangle"
+                    />
+
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="@dimen/line_height_default"
+                android:layout_height="match_parent"
+                android:background="@color/line_horizontal_gray"/>
+
+            <FrameLayout
+                android:id="@+id/fl_alarm_item_4"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_gray_transparent_bg"
+                >
+                <TextView
+                    android:id="@+id/text_content_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_title"
+                    android:text="@string/detection_alarm_delete_record"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_item_triangle"
+                    />
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_alarm_class"
+        android:scrollbars="none" />
+
+</RelativeLayout>

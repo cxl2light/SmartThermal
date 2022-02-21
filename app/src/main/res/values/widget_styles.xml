@@ -1,0 +1,64 @@
+<resources>
+
+    <style name="setting_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="image_h">20dp</item>
+        <item name="image_w">20dp</item>
+        <item name="image_text_space">4dp</item>
+        <item name="max_length">15</item>
+        <item name="normal_color">@color/text_color_normal_dark_bg</item>
+        <item name="not_selected_color">@color/text_color_normal_dark_bg</item>
+        <item name="disable_color">@color/text_color_normal_dark_bg</item>
+        <item name="selected_color">@color/text_color_selected_dark_bg</item>
+        <item name="text_max_lines">1</item>
+    </style>
+
+    <style name="text_menu_style" parent="setting_btn_style">
+        <item name="image_visible">false</item>
+        <item name="text_size">@dimen/text_size_main_body</item>
+    </style>
+
+    <style name="setting_btn_style_one">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="image_h">26dp</item>
+        <item name="image_w">26dp</item>
+        <item name="image_text_space">4dp</item>
+        <item name="max_length">15</item>
+        <item name="normal_color">@color/text_color_normal_dark_bg</item>
+        <item name="not_selected_color">@color/text_color_normal_dark_bg</item>
+        <item name="disable_color">@color/text_color_normal_dark_bg</item>
+        <item name="selected_color">@color/text_color_selected_dark_bg</item>
+        <item name="text_max_lines">1</item>
+    </style>
+
+    <style name="setting_btn_style_two">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">left</item>
+        <item name="android:orientation">vertical</item>
+        <item name="image_h">26dp</item>
+        <item name="image_w">26dp</item>
+        <item name="image_text_space">4dp</item>
+        <item name="max_length">15</item>
+        <item name="normal_color">@color/text_color_normal_dark_bg</item>
+        <item name="not_selected_color">@color/text_color_normal_dark_bg</item>
+        <item name="disable_color">@color/text_color_normal_dark_bg</item>
+        <item name="selected_color">@color/text_color_selected_dark_bg</item>
+        <item name="text_max_lines">1</item>
+    </style>
+
+    <style name="text_menu_style_one" parent="setting_btn_style_one">
+        <item name="image_visible">false</item>
+        <item name="text_size">@dimen/text_size_main_body</item>
+    </style>
+
+</resources>

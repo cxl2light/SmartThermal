@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_trans">#88333333</color>
+    <color name="gray_trans">#22333333</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="text_color_one">#333333</color>
+
+    <color name="bg_color_rtsp">#193448</color>
+    <color name="bg_gray">#ECECEC</color>
+    <color name="color_red">#FF0000</color>
+
+    <color name="text_color_selected">#ff4c1b</color>
+    <color name="item_bg_color">#1Affffff</color>
+    <color name="item_bg_color_selected">#3Affffff</color>
+    <color name="line_horizontal_gray">#454545</color>
+    <color name="pop_line_horizontal_gray">#9f9f9f</color>
+    <color name="transparent">#00ffffff</color>
+</resources>

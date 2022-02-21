@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Fl_alarm_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_height_default"
+    android:background="@drawable/selector_gray_transparent_bg"
+    >
+    <TextView
+        android:id="@+id/text_content"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        />
+
+    <ImageView
+        android:id="@+id/img_triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="8dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center_vertical|right"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_item_triangle"
+        />
+
+
+</FrameLayout>

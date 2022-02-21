@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_common_background"
+    tools:context=".device.ControlDeviceActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/left_menu_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/control_activity_bg"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/distance_measurement"
+            android:layout_width="@dimen/device_control_icon_w"
+            android:layout_height="@dimen/device_control_icon_h"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_distance_measurement" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/rate_btn"
+            android:layout_width="@dimen/device_control_icon_w"
+            android:layout_height="@dimen/device_control_icon_h"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_zoom" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/graphics_setting_img_btn"
+            android:layout_width="@dimen/device_control_icon_w"
+            android:layout_height="@dimen/device_control_icon_h"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_picture" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/setting_img_btn"
+            android:layout_width="@dimen/device_control_icon_w"
+            android:layout_height="@dimen/device_control_icon_h"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_setting" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <com.hq.monitor.device.widget.SeekBarWidget
+            android:id="@+id/seek_bar_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <com.hq.monitor.device.widget.SeekBarWidget
+            android:id="@+id/seek_bar_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/seek_bar_first"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/right_menu_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/control_activity_bg"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="15dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="17dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/palette"
+                android:layout_width="@dimen/device_control_icon_w"
+                android:layout_height="@dimen/device_control_icon_h"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_palette" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="5dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:srcCompat="@drawable/ic_close" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/circle_take_photos"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_circle_take_photos" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/take_photo_indicator"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/circle_take_photos"
+                app:layout_constraintTop_toTopOf="@id/circle_take_photos"
+                app:srcCompat="@drawable/ic_camera" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/take_video_indicator"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/circle_take_photos"
+                app:layout_constraintStart_toEndOf="@id/circle_take_photos"
+                app:srcCompat="@drawable/ic_vidicon" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/open_file_btn"
+            android:layout_width="@dimen/device_control_icon_w"
+            android:layout_height="0dp"
+            android:layout_marginStart="17dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_folder" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

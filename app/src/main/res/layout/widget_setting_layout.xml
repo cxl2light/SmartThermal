@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:background="@color/control_activity_bg"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/polarization_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_polarization"
+        app:text_str="@string/str_reticle" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/coordinate_axis_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_picture_in_picture"
+        app:text_str="@string/str_picture_in_picture" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/track_btn"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_track"
+        app:text_str="@string/str_tracking" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/gps_btn"
+        style="@style/setting_btn_style"
+        android:visibility="gone"
+        app:normal_src="@drawable/ic_gps"
+        app:text_str="GPS"
+        tools:visibility="gone" />
+
+    <com.hq.commonwidget.WidgetImageTextView
+        android:id="@+id/close_btn"
+        android:visibility="gone"
+        style="@style/setting_btn_style"
+        app:normal_src="@drawable/ic_close"
+        app:text_str="@string/str_exit" />
+</merge>

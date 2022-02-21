@@ -1,0 +1,186 @@
+<resources>
+    <string name="app_name">Smart Thermal</string>
+
+    <string name="confirm">确定</string>
+    <string name="about">关于</string>
+
+    <string name="rtsp_url_hint">请输入完整的Rtsp地址</string>
+    <string name="count_down_tip">%1$ds\u0020跳过</string>
+    <string name="scan_device">搜索设备</string>
+    <string name="scan_device_stop">停止扫描</string>
+    <string name="scan_device_list">设备列表：</string>
+    <string name="title_device_list">设备列表</string>
+    <string name="title_input_rtsp_url">输入地址</string>
+    <string name="title_media_gallery">媒体库</string>
+    <string name="title_input_ftp_uri">ftp地址(本页面用于测试)</string>
+    <string name="connect_device">连接设备</string>
+    <string name="enter_device">进入设备</string>
+    <string name="please_select_connect_device">请选择要连接的设备信息</string>
+
+    <string name="about_software_introduce">产品介绍:  本App适用于我司手持红外热像仪，您可以用过App看到热像仪的实时画面，并远程控制热像仪，也可以将您所拍摄的照片和视频更加方便的分享给朋友。</string>
+    <string name="version_name_placeholder">V%1$s</string>
+
+    <string name="control_left_ranging">测距</string>
+    <string name="control_left_zoom">变倍</string>
+    <string name="control_left_image_setting">图像设置</string>
+    <string name="control_left_system_setting">功能设置</string>
+    <string name="control_right_palette">色板</string>
+    <string name="control_right_file">文件</string>
+
+    <!--    白热、黑热、铁红、蓝红、高温红、低温蓝，改为白热、黑热、红热、绿色、青色、紫色-->
+    <string name="colour_atla_black">黑热</string>
+    <string name="colour_atla_white">白热</string>
+    <string name="colour_atla_red">红热</string>
+    <string name="colour_atla_green">绿色</string>
+    <string name="colour_atla_brownness">金色</string>
+    <string name="colour_atla_rust">紫罗兰</string>
+
+    <string name="base_enter">进入</string>
+    <string name="base_yes">是</string>
+    <string name="base_no">否</string>
+
+    <string name="base_known">同意</string>
+    <string name="quit_out">退出</string>
+    <string name="click_to_law">隐私协议:  点击查看用户协议及隐私协议</string>
+    <string name="laws_title">用户隐私协议</string>
+    <string name="laws_content">我们非常重视您的个人信息和隐私保护。为了有效保障您的个人权益，在使用“Smart Thermal”服务前，请您务必审慎阅读 《用户协议》《隐私协议》 内的所有条款，为向你提供通过APP观看热像仪的实时画面,并远程控制热像仪，我们会使用必要的功能信息。\n 1、为了配合购买的硬件使用并简单控制硬件，我们需要访问网络权限，\n 2、为了方便录制并存储硬件的音视频内容，，我们将获取您的内存，相机权限 \n 3、我们对您的设备文件使用/保护等规则条款，以及您的用户权利条等条款;\n 4、约定我们的限制责任、免责条款;\n\n如果同意上述协议及声明的内容，请点击“同意”开始使用产品和服务。如后再次使用，即表示您已同意《用户隐私协议》。 否则，请退出本应用程序并建议删除卸载本应用";
+    </string>
+
+    <string name="select_hint">搜索是否需要帮助？</string>
+    <string name="operate_share">分享</string>
+    <string name="operate_delete">删除</string>
+    <string name="delete_tip_placeholder">确定要删除文件：%1$s?</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="error_drm_unknown">An unknown DRM error occurred</string>
+    <string name="error_no_decoder">This device does not provide a decoder for %1$s</string>
+    <string name="error_no_secure_decoder">This device does not provide a secure decoder for %1$s</string>
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+    <string name="error_instantiating_decoder">Unable to instantiate decoder %1$s</string>
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="empty_picture_file_tip">暂时没有图片文件</string>
+    <string name="empty_video_file_tip">暂时没有视频文件</string>
+
+    <string name="device_management">设备管理</string>
+    <string name="realtime_vision">实时视频</string>
+    <string name="live_stream">直播推流</string>
+
+    <string name="str_reticle">分划</string>
+    <string name="str_xy">X-Y</string>
+    <string name="str_picture_in_picture">画中画</string>
+    <string name="str_tracking">跟踪</string>
+    
+    <string name="str_sharpness">锐度</string>
+    <string name="str_contrast">对比度</string>
+    <string name="str_brightness">亮度</string>
+    <string name="str_filtering">降噪</string>
+
+    <string name="tip_scanning_device">正在扫描设备...</string>
+    <string name="tip_scan_finished_no_device">扫描完成，没有发现任何设备!</string>
+    <string name="tip_open_wi_fi_hotspots">请打开手机热点</string>
+    <string name="tip_open_net">请连接WiFi或打开热点并连接设备</string>
+    <string name="tip_delete_success">删除成功</string>
+    <string name="tip_cur_ip_addr">当前地址：%1$s</string>
+    <string name="tip_hot_spot_no_device">热点没有连接设备</string>
+    <string name="tip_get_device_ip_exception">当前设备IP获取异常：</string>
+    <string name="tip_save_success">保存成功</string>
+
+    <string name="help_device_wifi">设备释放热点</string>
+    <string name="help_phone_wifi">手机释放热点</string>
+    <string name="help_same_wifi">连接路由器</string>
+
+    <string name="help_device_setting">设备设置</string>
+    <string name="help_phone_setting">手机设置</string>
+    <string name="help_search_device">搜索设备</string>
+
+    <string name="help_search_device_1">双击摇杆中键，进入菜单，打开网络，选择Hotspot</string>
+    <string name="help_search_device_2">打开Hotspot开始配置参数</string>
+    <string name="help_search_device_3">设置Name为cyclops325，设置密码为12345678，移动光标点击ok</string>
+    <string name="help_search_device_4">打开手机WLAN，搜素无线网络Cyclops325</string>
+    <string name="help_search_device_5">输入密码12345678，确认</string>
+    <string name="help_search_device_6">提示网络连接成功</string>
+
+    <string name="help_search_mobile_1">打开手机热点，确认手机没有连接任何无线网络</string>
+    <string name="help_search_mobile_2">设置密码12345678，确认</string>
+    <string name="help_search_mobile_3">提示热点打开成功</string>
+    <string name="help_search_mobile_4">双击摇杆中键，进入菜单，打开网络，选择WI-FI</string>
+    <string name="help_search_mobile_5">打开WI-FI，搜索无线网络选择iPhone13进入</string>
+    <string name="help_search_mobile_6">输入密码12345678，移动光标点击Connection</string>
+
+    <string name="help_search_wifi_1">打开手机WLAN，搜素无线网络TP-link</string>
+    <string name="help_search_wifi_2">输入密码12345678，确认</string>
+    <string name="help_search_wifi_3">提示网络连接成功</string>
+    <string name="help_search_wifi_4">双击摇杆中键，进入菜单，打开网络，选择WI-FI</string>
+    <string name="help_search_wifi_5">打开WI-FI，搜索无线网络选择TP-link进入</string>
+    <string name="help_search_wifi_6">输入密码12345678，移动光标点击Connection</string>
+
+    <string name="help_search_total_text">通过三个简单的步骤，让设备与手机连接后，把视频和图片分享给朋友</string>
+
+    <string name="str_picture">图片</string>
+    <string name="str_video">视频</string>
+
+    <string name="menu_return_to_previous">返回上一级</string>
+    <string name="menu_connection_guide">搜索帮助</string>
+    <string name="menu_device_management">设备管理</string>
+    <string name="menu_realtime_vision">实时视频</string>
+    <string name="menu_live_stream">直播推流</string>
+    <string name="menu_about">关于信息</string>
+
+    <string name="detection_alarm">侦测警报</string>
+    <string name="detection_alarm_set">设置</string>
+    <string name="detection_alarm_record">记录</string>
+    <string name="detection_alarm_open">开启</string>
+    <string name="detection_alarm_close">关闭</string>
+    <string name="detection_alarm_mode">设备提醒方式</string>
+    <string name="detection_alarm_mode_mute">静音</string>
+    <string name="detection_alarm_mode_vibrate">震动</string>
+    <string name="detection_alarm_mode_sound">铃声</string>
+    <string name="detection_alarm_save_time">保存通知时间</string>
+    <string name="detection_alarm_save_one_day">一天</string>
+    <string name="detection_alarm_save_a_week">一周</string>
+    <string name="detection_alarm_save_one_month">一个月</string>
+    <string name="detection_alarm_interval">侦测间隔时间</string>
+    <string name="detection_alarm_interval_1_minute">10秒</string>
+    <string name="detection_alarm_interval_10_minutes">30秒</string>
+    <string name="detection_alarm_interval_30_minutes">60秒</string>
+    <string name="detection_alarm_all">所有目标</string>
+    <string name="detection_alarm_animal">ANIMAL</string>
+    <string name="detection_alarm_person">PERSON</string>
+    <string name="detection_alarm_delete_record">删除记录</string>
+    <string name="detection_alarm_delete_all">删除全部</string>
+
+    <string name="about_product_sn">产品编号: </string>
+    <string name="about_current_version">当前版本: </string>
+    <string name="about_product_introduction">产品介绍</string>
+    <string name="about_version_update_check">检查更新</string>
+    <string name="about_got_update">检测到新版本：%1$s</string>
+    <string name="about_start_update">开始更新</string>
+    <string name="about_cancel_update">取消更新</string>
+    <string name="about_checking_update">正在检查新版本</string>
+    <string name="error_network">网络请求错误，请确认是否连接网络</string>
+    <string name="about_update_downloading">正在下载 ：%1$s</string>
+    <string name="about_update_pushing">正在传输 ：%1$s</string>
+    <string name="about_update_push">安装新版本</string>
+    <string name="about_update_success">升级成功</string>
+    <string name="about_update_restart">重启</string>
+    <string name="error_update">升级未成功</string>
+    <string name="about_update_upgrading">请稍后,正在升级中...</string>
+
+    <string name="new_version_detected">检测到新版本</string>
+    <string name="new_version_latest">已经是最新版本</string>
+
+
+    <string name="app_about">通过APP可以观察热成像的实时图像，并与朋友分享精彩画面</string>
+
+    <string name="str_exit">退出</string>
+    <string name="user_manual">用户手册</string>
+
+    <string name="version_content">连接APP需设备固件版本为V2.0.2以上;如果有必要，请在电脑上链接 %1$s 下载更新固件</string>
+    <string name="version_one">进入下载</string>
+    <string name="version_two">不需要</string>
+    <string name="version_three">不再显示</string>
+
+    <string name="give_file_path">请传入文件夹路径</string>
+
+</resources>

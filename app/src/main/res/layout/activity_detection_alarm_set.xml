@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cat_bright"
+    tools:context=".about.LoadingActivity"
+    tools:ignore="SpUsage">
+
+    <com.hq.base.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_default"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_bar"
+        android:gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_alarm_mode"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_gray_transparent_bg"
+            >
+
+            <TextView
+                android:id="@+id/text_tag_mode"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_mode"
+                android:paddingLeft="@dimen/left_margin_default"
+                />
+
+            <TextView
+                android:id="@+id/text_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_mode_mute"
+                android:layout_marginRight="@dimen/right_margin_default"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_right_arrow"
+                android:layout_marginRight="100dp"
+                />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_alarm_save_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_gray_transparent_bg"
+            >
+
+            <TextView
+                android:id="@+id/text_tag_save_time"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_save_time"
+                android:paddingLeft="@dimen/left_margin_default"
+                />
+
+            <TextView
+                android:id="@+id/text_save_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_save_one_day"
+                android:layout_marginRight="@dimen/right_margin_default"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_right_arrow"
+                android:layout_marginRight="100dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <LinearLayout
+            android:id="@+id/ll_alarm_interval"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/selector_gray_transparent_bg"
+            >
+
+            <TextView
+                android:id="@+id/text_tag_interval"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_interval"
+                android:paddingLeft="@dimen/left_margin_default"
+                />
+
+            <TextView
+                android:id="@+id/text_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_title"
+                android:text="@string/detection_alarm_interval_1_minute"
+                android:layout_marginRight="@dimen/right_margin_default"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_right_arrow"
+                android:layout_marginRight="100dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

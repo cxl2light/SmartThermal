@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="device_item_padding_horizontal">10dp</dimen>
+
+    <dimen name="device_control_icon_w">26dp</dimen>
+    <dimen name="device_control_icon_h">26dp</dimen>
+
+    <dimen name="device_control_icon_w2">90dp</dimen>
+    <dimen name="device_control_icon_h2">90dp</dimen>
+
+    <dimen name="common_menu_popup_width">80dp</dimen>
+    <dimen name="common_menu_popup_padding_h">2dp</dimen>
+    <dimen name="common_menu_popup_gap">8dp</dimen>
+
+    <dimen name="media_recycler_item_padding">15dp</dimen>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/bg_cat">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.hq.base.widget.CommonTitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:widget_attr_title="" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvText"
+            android:layout_below="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="ThermTech Vision"
+            android:textColor="@color/colorPrimary"
+            android:textSize="40sp"
+            android:textStyle="italic|bold" />
+        <ImageView
+            android:id="@+id/ivText"
+            android:layout_below="@+id/title_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_width="206dp"
+            android:layout_height="31dp"
+            android:src="@drawable/ic_main_text_one"/>
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:id="@+id/btnDevice"
+            android:layout_below="@+id/ivText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:enabled="true"
+            android:paddingVertical="10dp"
+            android:text="@string/app_name"
+            android:textSize="@dimen/text_size_btn"
+            android:visibility="visible"
+            app:widget_selector_btn_corners_radius_left_bottom="10dp"
+            app:widget_selector_btn_corners_radius_left_top="10dp"
+            app:widget_selector_btn_corners_radius_right_bottom="10dp"
+            app:widget_selector_btn_corners_radius_right_top="10dp"
+            tools:visibility="visible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOne"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

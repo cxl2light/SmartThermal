@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cat"
+    tools:ignore="SpUsage">
+
+    <com.hq.base.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:widget_attr_title="" />
+
+    <ImageView
+        android:id="@+id/ivText"
+        android:layout_below="@+id/title_bar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_width="206dp"
+        android:layout_height="31dp"
+        android:src="@drawable/ic_main_text_one"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/device_recycler_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="10dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/progress_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.hq.commonwidget.CircleProgress
+                android:visibility="gone"
+                android:id="@+id/scan_progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <com.hq.monitor.view.IOSLoadingView
+                android:id="@+id/loadingOne"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scan_tip"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/tip_scanning_device"
+                android:textColor="@color/text_color_white"
+                android:textSize="14dp"
+                app:circle_finished_color="@color/theme_color" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </FrameLayout>
+    <com.hq.commonwidget.WidgetSelectorBtn
+        android:id="@+id/connect_device_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginHorizontal="@dimen/device_item_padding_horizontal"
+        android:layout_marginBottom="20dp"
+        android:enabled="false"
+        android:paddingVertical="10dp"
+        android:text="@string/enter_device"
+        android:textSize="@dimen/text_size_btn"
+        app:widget_selector_btn_corners_radius_right_bottom="@dimen/dp_10"
+        app:widget_selector_btn_corners_radius_right_top="@dimen/dp_10"
+        app:widget_selector_btn_corners_radius_left_bottom="@dimen/dp_10"
+        app:widget_selector_btn_corners_radius_left_top="@dimen/dp_10" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

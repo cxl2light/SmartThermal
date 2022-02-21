@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/common_menu_popup_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/shape_rect_alarm_pop_bg"
+    android:focusable="true"
+    >
+
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        android:text="@string/detection_alarm_mode_mute"
+        android:gravity="center"
+        android:background="@drawable/selector_transparent_bg"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_default"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/pop_line_horizontal_gray"/>
+    <TextView
+        android:id="@+id/text_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        android:text="@string/detection_alarm_mode_vibrate"
+        android:gravity="center"
+        android:background="@drawable/selector_transparent_bg"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_default"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/pop_line_horizontal_gray"/>
+    <TextView
+        android:id="@+id/text_three"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        android:text="@string/detection_alarm_mode_sound"
+        android:gravity="center"
+        android:background="@drawable/selector_transparent_bg"/>
+
+</LinearLayout>

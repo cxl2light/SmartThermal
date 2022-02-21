@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cat_bright"
+    tools:context=".about.LoadingActivity"
+    tools:ignore="SpUsage">
+
+    <com.hq.base.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_default"
+        android:orientation="vertical"
+        android:layout_below="@+id/title_bar"
+        android:gravity="center">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <TextView
+            android:id="@+id/text_set"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:text="@string/detection_alarm_set"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/left_margin_default"
+            android:background="@drawable/selector_gray_transparent_bg"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <TextView
+            android:id="@+id/text_record"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:text="@string/detection_alarm_record"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/left_margin_default"
+            android:background="@drawable/selector_gray_transparent_bg"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_default"
+            android:background="@color/line_horizontal_gray"/>
+
+        <TextView
+            android:id="@+id/text_exit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height_default"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_title"
+            android:text="@string/detection_alarm_open"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/left_margin_default"
+            android:background="@drawable/selector_gray_transparent_bg"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

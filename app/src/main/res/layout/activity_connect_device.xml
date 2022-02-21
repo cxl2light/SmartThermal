@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_cat"
+    tools:context=".device.ConnectDeviceActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/character_icon"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_padding_horizontal"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_menu_white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/about"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="16dp"
+        android:text="@string/about"
+        android:textColor="@color/theme_color"
+        android:textSize="@dimen/text_size_main_body"
+        app:layout_constraintBottom_toBottomOf="@id/character_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/character_icon" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/device_list_label_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/character_icon"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/common_padding_horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="10dp"
+            android:text="@string/scan_device_list"
+            android:textColor="@color/text_color_main_body"
+            android:textSize="@dimen/text_size_main_body" />
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/scan_progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:theme="@style/Widget.AppCompat.ProgressBar" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/device_list_label_layout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/device_recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/device_list_label_layout" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:text="ThermTech Vision"
+        android:textColor="@color/colorPrimary"
+        android:textSize="40sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:id="@+id/ivText"
+        android:layout_centerHorizontal="true"
+        android:layout_width="206dp"
+        android:layout_height="31dp"
+        android:src="@drawable/ic_main_text_one"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/common_padding_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:id="@+id/scan_device_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingVertical="10dp"
+            android:text="@string/scan_device"
+            android:textSize="@dimen/text_size_btn"
+            app:widget_selector_btn_corners_radius_left_bottom="10dp"
+            app:widget_selector_btn_corners_radius_left_top="10dp"
+            app:widget_selector_btn_corners_radius_right_bottom="10dp"
+            app:widget_selector_btn_corners_radius_right_top="10dp" />
+        <!--android:layout_weight="1"-->
+
+        <com.hq.commonwidget.WidgetSelectorBtn
+            android:id="@+id/connect_device_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginStart="30dp"
+            android:enabled="false"
+            android:paddingVertical="10dp"
+            android:text="@string/connect_device"
+            android:textSize="@dimen/text_size_btn"
+            android:visibility="gone"
+            app:widget_selector_btn_corners_radius_left_bottom="10dp"
+            app:widget_selector_btn_corners_radius_left_top="10dp"
+            app:widget_selector_btn_corners_radius_right_bottom="10dp"
+            app:widget_selector_btn_corners_radius_right_top="10dp"
+            tools:visibility="visible" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

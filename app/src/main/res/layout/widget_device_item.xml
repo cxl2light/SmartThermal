@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:parentTag="androidx.appcompat.widget.LinearLayoutCompat">
+
+    <com.hq.commonwidget.WidgetSelectorBtn
+        android:id="@+id/device_item_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/device_item_padding_horizontal"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:textSize="@dimen/text_size_main_body"
+        app:widget_selector_btn_corners_radius="10dp"
+        app:widget_selector_btn_normal_start_color="@color/background_common_background"
+        app:widget_selector_btn_press_start_color="@color/theme_color"
+        app:widget_selector_btn_stroke_color="#909090"
+        app:widget_selector_btn_stroke_color_press="@color/default_btn_stroke_color"
+        app:widget_selector_btn_stroke_width="1dp"
+        app:widget_selector_btn_text_color_normal="@color/text_color_main_body"
+        app:widget_selector_btn_text_color_press="@color/text_color_theme_bg"
+        tools:text="设备：1" />
+
+</merge>

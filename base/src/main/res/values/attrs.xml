@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CommonTitleBar">
+        <attr name="widget_attr_title" format="string|reference" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hq.monitor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取WIFI信息状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取网络状态改变的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="com.hq.monitor.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_one"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
+
+        <activity
+            android:name="com.hq.monitor.about.LoadingActivity"
+            android:configChanges="screenSize|screenLayout|orientation"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppLoadingTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hq.monitor.device.ConnectDeviceActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.about.AboutDeviceActivity"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTop"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.RtspUrlInputActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity
+            android:name="com.hq.monitor.play.PlayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.ControlDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ControlActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.ControlDeviceIJKActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/ControlActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.DeviceScanListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.alarm.DetectionAlarmActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.alarm.DetectionAlarmSetActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity
+            android:name="com.hq.monitor.device.alarm.DetectionAlarmListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <receiver android:name="com.hq.monitor.device.receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="NOTIFICATION_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.hq.monitor.media.local.LocalMediaListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+
+        <activity
+            android:name="com.hq.monitor.media.local.LocalPictureViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+
+        <activity
+            android:name="com.hq.monitor.media.local.PlayLocalVideoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity android:name="com.hq.monitor.about.ConnectHelpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity android:name="com.hq.monitor.about.DeviceConnectedActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity android:name="com.hq.monitor.about.DeviceHelpListActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme" />
+        <activity android:name="com.hq.monitor.about.ProductIntroduceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.devicescanpre.DeviceScanPreActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.about.AboutAppActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.searchhelp.devicesearchhelp.DeviceSearchHelpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.searchhelp.devicestart.DeviceSearchHelpDeviceActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.searchhelp.devicestart.DeviceStartOneActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.searchhelp.mobilestart.DeviceSearchHelpMobileActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.ui.searchhelp.wifistart.DeviceSearchHelpWifiActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.media.local.LocalPictureBannerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+        <activity android:name="com.hq.monitor.media.local.LocalVideoBannerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppActivityTheme"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.hq.monitor"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_title_bar_height">30dp</dimen>
+    <dimen name="common_padding_horizontal">16dp</dimen>
+
+    <dimen name="text_size_big">18sp</dimen>
+    <dimen name="text_size_main_body">15sp</dimen>
+    <dimen name="text_size_btn">14sp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="text_size_title_menu">14sp</dimen>
+    <dimen name="text_size_tip">10sp</dimen>
+</resources>

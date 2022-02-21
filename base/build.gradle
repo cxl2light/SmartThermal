@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply from: "dependencies.gradle"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    // Auto parse libraries from jars or aars.
+    api fileTree(dir: 'libs', include: ['*.aar', '*.jar'])
+
+    api project(':commonwidget')
+    api project(':basebean')
+
+    api libs.appcompat
+    api libs.constraintLayout
+    api libs.BRVAH
+    api libs.permission
+    api libs.glide
+    annotationProcessor libs.glide_compiler
+    api libs.design
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

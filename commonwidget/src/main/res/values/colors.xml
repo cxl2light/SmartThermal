@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF4C1B</color>
+    <color name="colorPrimaryDark">#FF4C1B</color>
+    <color name="colorAccent">#FF4C1B</color>
+
+    <color name="default_btn_color_normal">#FF4C1B</color>
+    <color name="default_btn_color_press">#ddFF4C1B</color>
+    <color name="default_btn_color_disable">#66b6b6b6</color>
+    <color name="default_btn_text_color">@android:color/white</color>
+
+    <color name="default_progress_tip_color">#FF4C1B</color>
+</resources>

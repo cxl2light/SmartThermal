@@ -124,7 +124,9 @@ public class ObservableStart {
                         Log.d("ZeTwo=", "channelNo=" + channelNo + ",mIp=" + mIp + ",pJson" + pJson);
                         try {
                             listAiObjInfo = new Gson().fromJson(pJson, new TypeToken<List<AiObjInfo>>(){}.getType());
-                            sendNotificationBroadcast(listAiObjInfo);
+                            if (mDeviceConfig != null && mDeviceConfig.getDistanceEn()){
+                                sendNotificationBroadcast(listAiObjInfo);
+                            }
                         } catch (Exception e) {
                             Log.d("ZeErrorJson", "channelNo=" + channelNo + ",pJson" + pJson);
                             return;

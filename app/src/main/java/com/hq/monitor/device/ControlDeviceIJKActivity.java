@@ -98,7 +98,7 @@ public class ControlDeviceIJKActivity extends BaseActivity
     private boolean isFront = true;  //判断当前Activity是否在前台
 
     private Handler handler = new Handler();
-    private int[] alarmIntervals = {10, 30, 60, 1};
+    private int[] alarmIntervals = {5, 10, 30, 60, 1};
 
     View viewOne,viewTwo;
 

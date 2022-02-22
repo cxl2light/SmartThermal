@@ -142,6 +142,7 @@
     <string name="detection_alarm_save_a_week">a week</string>
     <string name="detection_alarm_save_one_month">one month</string>
     <string name="detection_alarm_interval">Detection interval</string>
+    <string name="detection_alarm_interval_5_seconds">5 seconds</string>
     <string name="detection_alarm_interval_1_minute">10 seconds</string>
     <string name="detection_alarm_interval_10_minutes">30 seconds</string>
     <string name="detection_alarm_interval_30_minutes">60 seconds</string>

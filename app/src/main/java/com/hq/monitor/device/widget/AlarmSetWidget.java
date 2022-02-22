@@ -19,11 +19,18 @@ import com.hq.monitor.util.SpUtils;
  */
 public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickListener {
 
-    private TextView textOne, textTwo, textThree;
+    private TextView textOne, textTwo, textThree, textFour;
 
     private TextView textSelected = null;
 
     private OnOptionChange mOnOptionChange;
+
+    private boolean fourItem = false;
+
+    public AlarmSetWidget(Context context, boolean show){
+        this(context);
+        this.fourItem = show;
+    }
 
     public AlarmSetWidget(@NonNull Context context) {
         this(context, null);
@@ -40,6 +47,8 @@ public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickLi
         textTwo.setOnClickListener(this);
         textThree = findViewById(R.id.text_three);
         textThree.setOnClickListener(this);
+        textFour = findViewById(R.id.text_four);
+        textFour.setOnClickListener(this);
 
         int POP_TYPE = SpUtils.getInt(context,SpUtils.ALARM_SET_POP_TYPE, 0);
         if (POP_TYPE == SpUtils.ALARM_SAVE_TIME){
@@ -48,9 +57,11 @@ public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickLi
             textThree.setText(getResources().getString(R.string.detection_alarm_save_one_month));
         }
         else if (POP_TYPE == SpUtils.ALARM_INTERVAL){
-            textOne.setText(getResources().getString(R.string.detection_alarm_interval_1_minute));
-            textTwo.setText(getResources().getString(R.string.detection_alarm_interval_10_minutes));
-            textThree.setText(getResources().getString(R.string.detection_alarm_interval_30_minutes));
+            textOne.setText(getResources().getString(R.string.detection_alarm_interval_5_seconds));
+            textTwo.setText(getResources().getString(R.string.detection_alarm_interval_1_minute));
+            textThree.setText(getResources().getString(R.string.detection_alarm_interval_10_minutes));
+            textFour.setVisibility(View.VISIBLE);
+            textFour.setText(getResources().getString(R.string.detection_alarm_interval_30_minutes));
         }
     }
 
@@ -71,6 +82,10 @@ public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickLi
             case R.id.text_three:
                 optionSelected(textThree);
                 mOnOptionChange.onOptionChange(2);
+                break;
+            case R.id.text_four:
+                optionSelected(textFour);
+                mOnOptionChange.onOptionChange(3);
                 break;
         }
     }
@@ -101,6 +116,12 @@ public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickLi
         {
             textThree.setTextColor(colorWhite);
             textThree.setSelected(false);
+        }
+
+        if (textFour != null)
+        {
+            textFour.setTextColor(colorWhite);
+            textFour.setSelected(false);
         }
 
     }

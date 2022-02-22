@@ -33,7 +33,7 @@ public class DetectionAlarmSetActivity extends BaseActivity implements View.OnCl
 
     private int[] modes = {R.string.detection_alarm_mode_mute, R.string.detection_alarm_mode_vibrate, R.string.detection_alarm_mode_sound};
     private int[] saveTimes = {R.string.detection_alarm_save_one_day, R.string.detection_alarm_save_a_week, R.string.detection_alarm_save_one_month};
-    private int[] intervals = {R.string.detection_alarm_interval_1_minute, R.string.detection_alarm_interval_10_minutes, R.string.detection_alarm_interval_30_minutes};
+    private int[] intervals = {R.string.detection_alarm_interval_5_seconds, R.string.detection_alarm_interval_1_minute, R.string.detection_alarm_interval_10_minutes, R.string.detection_alarm_interval_30_minutes};
 
     private PopupWindow preShowingPopup;
     private AlarmSetPopMenu setModePopupWindow, setSaveTimePopupWindow, setIntervalPopupWindow;
@@ -136,7 +136,7 @@ public class DetectionAlarmSetActivity extends BaseActivity implements View.OnCl
         SpUtils.saveInt(this,SpUtils.ALARM_SET_POP_TYPE, SpUtils.ALARM_INTERVAL);
         resetTagTextView(tagInterval);
         if (setIntervalPopupWindow == null) {
-            setIntervalPopupWindow = new AlarmSetPopMenu(mActivity);
+            setIntervalPopupWindow = new AlarmSetPopMenu(mActivity, true);
             setIntervalPopupWindow.setOnOptionChange(value -> {
                 setTextContent(textInterval, value);
                 SpUtils.saveInt(this,SpUtils.ALARM_INTERVAL_STRING, value);

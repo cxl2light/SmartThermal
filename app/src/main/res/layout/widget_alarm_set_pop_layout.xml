@@ -50,4 +50,20 @@
         android:gravity="center"
         android:background="@drawable/selector_transparent_bg"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_default"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/pop_line_horizontal_gray"/>
+    <TextView
+        android:id="@+id/text_four"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height_default"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_title"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/selector_transparent_bg"/>
+
 </LinearLayout>

@@ -62,7 +62,7 @@ public class MenuDialog extends DialogFragment {
 //        mDataList.add(new QuickBean(false,R.mipmap.ic_menu_setting,"直播设置"));
         mDataList.add(new QuickBean(false,isClickable,R.mipmap.ic_menu_devices,R.string.menu_device_management));
         mDataList.add(new QuickBean(false,isClickable,R.mipmap.ic_menu_videocast,R.string.menu_realtime_vision));
-        mDataList.add(new QuickBean(false,isClickable,R.mipmap.ic_menu_broadcasting,R.string.detection_alarm));
+        mDataList.add(new QuickBean(false,isClickable,R.mipmap.ic_menu_alarm,R.string.detection_alarm));
         mDataList.add(new QuickBean(false,true,R.mipmap.ic_menu_about,R.string.menu_about));
         //创建adapter
         MenuAdapter adapterOne = new MenuAdapter();

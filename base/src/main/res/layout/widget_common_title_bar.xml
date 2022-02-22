@@ -118,9 +118,9 @@
                 tools:visibility="visible" />
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivShare"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="6dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
                 app:srcCompat="@drawable/icon_share_white"
                 android:visibility="gone"
                 tools:visibility="visible" />

@@ -46,7 +46,7 @@ public class IOSLoadingView extends View {
      * 循环颜色
      */
 //    private String[] color = {"#bbbbbb", "#aaaaaa", "#999999", "#888888", "#777777", "#666666",};
-    private String[] color = {"#FFFFFFFF", "#99FFFFFF", "#88FFFFFF", "#77FFFFFF", "#66777777", "#55666666",};
+    private String[] color = {"#55666666", "#66777777", "#77FFFFFF", "#88FFFFFF", "#99FFFFFF", "#FFFFFFFF",};
 
     public IOSLoadingView(Context context) {
         this(context, null);

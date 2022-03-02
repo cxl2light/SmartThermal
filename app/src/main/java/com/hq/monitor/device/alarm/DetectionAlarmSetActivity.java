@@ -136,7 +136,7 @@ public class DetectionAlarmSetActivity extends BaseActivity implements View.OnCl
         SpUtils.saveInt(this,SpUtils.ALARM_SET_POP_TYPE, SpUtils.ALARM_INTERVAL);
         resetTagTextView(tagInterval);
         if (setIntervalPopupWindow == null) {
-            setIntervalPopupWindow = new AlarmSetPopMenu(mActivity, true);
+            setIntervalPopupWindow = new AlarmSetPopMenu(mActivity);
             setIntervalPopupWindow.setOnOptionChange(value -> {
                 setTextContent(textInterval, value);
                 SpUtils.saveInt(this,SpUtils.ALARM_INTERVAL_STRING, value);

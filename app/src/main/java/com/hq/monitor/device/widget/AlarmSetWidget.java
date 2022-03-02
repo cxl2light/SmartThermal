@@ -60,8 +60,10 @@ public class AlarmSetWidget extends LinearLayoutCompat implements View.OnClickLi
             textOne.setText(getResources().getString(R.string.detection_alarm_interval_5_seconds));
             textTwo.setText(getResources().getString(R.string.detection_alarm_interval_1_minute));
             textThree.setText(getResources().getString(R.string.detection_alarm_interval_10_minutes));
-            textFour.setVisibility(View.VISIBLE);
-            textFour.setText(getResources().getString(R.string.detection_alarm_interval_30_minutes));
+            if (fourItem){
+                textFour.setVisibility(View.VISIBLE);
+                textFour.setText(getResources().getString(R.string.detection_alarm_interval_30_minutes));
+            }
         }
     }
 

@@ -141,9 +141,9 @@
     <string name="detection_alarm_save_a_week">一周</string>
     <string name="detection_alarm_save_one_month">一个月</string>
     <string name="detection_alarm_interval">侦测间隔时间</string>
-    <string name="detection_alarm_interval_5_seconds">5秒</string>
-    <string name="detection_alarm_interval_1_minute">10秒</string>
-    <string name="detection_alarm_interval_10_minutes">30秒</string>
+    <string name="detection_alarm_interval_5_seconds">1秒</string>
+    <string name="detection_alarm_interval_1_minute">2秒</string>
+    <string name="detection_alarm_interval_10_minutes">5秒</string>
     <string name="detection_alarm_interval_30_minutes">60秒</string>
     <string name="detection_alarm_all">所有目标</string>
     <string name="detection_alarm_animal">ANIMAL</string>

@@ -1,14 +1,18 @@
 package com.hq.monitor.ui.devicescanpre;
 
 import android.Manifest;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.os.PowerManager;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +22,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
@@ -32,15 +38,15 @@ import com.hq.base.CommonConst;
 import com.hq.base.consts.GlobalConst;
 import com.hq.base.dialog.CommonConfirmDialog;
 import com.hq.base.ui.BaseActivity;
+import com.hq.base.util.Logger;
 import com.hq.base.util.ToastUtil;
 import com.hq.base.widget.CommonTitleBar;
 import com.hq.basebean.device.DeviceBaseInfo;
 import com.hq.commonwidget.item_decoration.SpaceItemDecoration;
 import com.hq.commonwidget.util.DensityUtil;
 import com.hq.monitor.R;
-import com.hq.monitor.about.DeviceConnectedActivity;
 import com.hq.monitor.adapter.DevicePopupListAdapter;
-import com.hq.monitor.device.ControlDeviceIJKActivity;
+import com.hq.monitor.app.MyApplication;
 import com.hq.monitor.device.DeviceScanPresenter;
 import com.hq.monitor.device.IDeviceScanView;
 import com.hq.monitor.device.menudialog.MenuDialog;
@@ -128,6 +134,59 @@ public class DeviceScanPreActivity extends BaseActivity implements View.OnClickL
                 progressLayout.setVisibility(View.GONE);
             }
         });
+
+        if (!isIgnoringBatteryOptimizations()){
+            requestIgnoreBatteryOptimizations();
+        }
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private boolean isIgnoringBatteryOptimizations() {
+        boolean isIgnoring = false;
+        PowerManager powerManager = (PowerManager) getSystemService(Context.POWER_SERVICE);
+        if(powerManager != null) {
+            isIgnoring = powerManager.isIgnoringBatteryOptimizations(getPackageName());
+        }
+        Logger.d(TAG, "isIgnoring=" + isIgnoring);
+        return isIgnoring;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void requestIgnoreBatteryOptimizations() {
+        try{
+            Intent intent = new Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+            intent.setData(Uri.parse("package:"+ getPackageName()));
+            startActivityForResult(intent, 200);
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 200 && !isIgnoringBatteryOptimizations()){
+            if (isHuawei()){
+                goHuaweiSetting();
+            } else if (isOPPO()){
+                goOPPOSetting();
+            } else if (isVIVO()){
+                goVIVOSetting();
+            } else if (isMeizu()){
+                goMeizuSetting();
+            } else if (isSamsung()){
+                goSamsungSetting();
+            } else if (isXiaomi()){
+                goXiaomiSetting();
+            } else if (isLeTV()){
+                goLetvSetting();
+            } else if (isSmartisan()){
+                goSmartisanSetting();
+            } else {
+                showActivity(getPackageName());
+            }
+        }
     }
 
     private void initShowMenuDialog() {
@@ -416,4 +475,129 @@ public class DeviceScanPreActivity extends BaseActivity implements View.OnClickL
         context.startActivity(intent);
     }
 
+
+     /** * 跳转到指定应用的首页 */
+    private void showActivity(@NonNull String packageName) {
+        Intent intent = getPackageManager().getLaunchIntentForPackage(packageName);
+        startActivity(intent);
+    }
+    /** * 跳转到指定应用的指定页面 */
+    private void showActivity(@NonNull String packageName, @NonNull String activityDir) {
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(packageName, activityDir));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    public static boolean isHuawei() {
+        if(Build.BRAND == null) {
+            return false;
+        } else{
+            return Build.BRAND.toLowerCase().equals("huawei") || Build.BRAND.toLowerCase().equals("honor");
+        }
+    }
+
+    private void goHuaweiSetting() {
+        try{
+            showActivity("com.huawei.systemmanager", "com.huawei.systemmanager.startupmgr.ui.StartupNormalAppListActivity");
+        } catch(Exception e) {
+            try {
+                showActivity("com.huawei.systemmanager", "com.huawei.systemmanager.optimize.bootstart.BootStartActivity");
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        }
+    }
+
+    public static boolean isXiaomi() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("xiaomi");
+    }
+
+    private void goXiaomiSetting() {
+        try {
+            showActivity("com.miui.securitycenter", "com.miui.permcenter.autostart.AutoStartManagementActivity");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isOPPO() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("oppo");
+    }
+
+    private void goOPPOSetting() {
+        try{
+            showActivity("com.coloros.phonemanager");
+        } catch(Exception e1) {
+            try{
+                showActivity("com.oppo.safe");
+            } catch(Exception e2) {
+                try{
+                    showActivity("com.coloros.oppoguardelf");
+                } catch(Exception e3) {
+                    showActivity("com.coloros.safecenter");
+                }
+            }
+        }
+    }
+
+    public static boolean isVIVO() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("vivo");
+    }
+
+    private void goVIVOSetting() {
+        try {
+            showActivity("com.iqoo.secure");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isMeizu() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("meizu");
+    }
+
+    private void goMeizuSetting() {
+        try {
+            showActivity("com.meizu.safe");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isSamsung() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("samsung");
+    }
+
+    private void goSamsungSetting() {
+        try{
+            showActivity("com.samsung.android.sm_cn");
+        } catch(Exception e) {
+            showActivity("com.samsung.android.sm");
+        }
+    }
+
+    public static boolean isLeTV() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("letv");
+    }
+
+    private void goLetvSetting() {
+        try {
+            showActivity("com.letv.android.letvsafe", "com.letv.android.letvsafe.AutobootManageActivity");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isSmartisan() {
+        return Build.BRAND != null&& Build.BRAND.toLowerCase().equals("smartisan");
+    }
+
+    private void goSmartisanSetting() {
+        try {
+            showActivity("com.smartisanos.security");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

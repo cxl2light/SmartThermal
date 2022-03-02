@@ -4,7 +4,11 @@ import android.app.Application;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.os.Build;
+import android.os.PowerManager;
 import android.util.DisplayMetrics;
+
+import androidx.annotation.RequiresApi;
 
 import com.hq.base.BuildConfig;
 import com.hq.base.app.CrashHandler;

@@ -1,8 +1,8 @@
 ext.versions = [
         // 系统级别的版本号
-        android_compile_sdk : 29,
-        android_min_sdk     : 19,
-        android_target_sdk  : 29,
+        android_compile_sdk : 30,
+        android_min_sdk     : 24,
+        android_target_sdk  : 30,
         version_code        : 6150,
         version_name        : "6.1.5",
         build_tools         : "28.0.3",
